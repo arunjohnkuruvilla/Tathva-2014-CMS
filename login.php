@@ -1,4 +1,7 @@
-<?php require_once("signin.php"); require_once("signup.php");?>
+<?php 
+  require_once("signin.php"); 
+  require_once("signup.php");
+?>
 <html>
 <head>
   <meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
@@ -12,12 +15,12 @@
   src:url("CafeNeroM54.ttf");
   }
   </style>
-  <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="login.js"></script>
 </head>
 
 <body>
-  <noscript><div style="background-color: #FF7777; padding: 20px; font-size: 20px">Please enable Javascript</div></noscript>
+  <noscript>
+    <div style="background-color: #FF7777; padding: 20px; font-size: 20px">Please enable Javascript</div>
+  </noscript>
   <div style="color:white; position:absolute; margin:8% auto; text-align:center; font-family:Tathva_Cafe; font-size:150%; width:100%">O r g a n i s e r</div>
   <?php 
   if($msg!="")
@@ -85,5 +88,7 @@
   </form>
   </div>
   </div>
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script type="text/javascript" src="login.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 	
 	<?php include('header.php');?>
 	<div id="margin">
-		<a href="marketPage.php"><h4>MARKETING</h4></a>
+		<h4>ADMIN | HOME</h4>
 		  	<!--<h4>Add contact</h4>
 			<div id="addmark">
 			<?php include('modules/form-marketing.php');?>		 
@@ -28,6 +28,8 @@
 		</div>-->
 	</div>
 	<div id="main">
+		<?php include('modules/form-marketing.php');?>
+		<?php include('modules/table-marketing.php');?>
 		<div id="instructions">
 			<h4>About Organiser - Tathva CMS</h4>
 			Tathva Content Management System (CMS) is a platform for organisers to contribute to certain aspects of Tathva's management, with a lot of emphasis on the content put up in the official website.

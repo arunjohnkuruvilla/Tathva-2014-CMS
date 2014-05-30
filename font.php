@@ -1,4 +1,4 @@
-  <style>
+<style>
     @font-face {
   font-family:"Cafe_Tathva";
   src:url('CafeNeroM54.ttf');
@@ -15,4 +15,4 @@
      {
       font-family:"tathva";
     }
-  </style>
+</style>
