@@ -1,0 +1,44 @@
+body
+ {
+  margin:auto;
+ }
+#main
+ {
+ 	float:right;
+ 	width:75%;
+ }
+#margin
+ {
+ 	float:left;
+ 	border-right: 3px solid #5555DD;
+ 	width:20%;
+ 	background-color: #DDDDFF;
+ 	z-index: 3;
+ }
+#instructions
+ {
+ 	float:left;
+ 	margin:5px;
+ 	font-size: 80%;
+ 	/*border:1px dotted black;*/
+ 	width:55%;
+ 	text-align:center;
+ }
+#addmarkcontainer
+ {
+ 	text-align: center;
+ 	width:100%;
+ }
+#showmark
+{
+
+ 	margin:auto;
+}
+#showmarkcontainer
+ { 
+ 	text-align: center;
+ 	position: relative;
+ 	width:100%;
+ }
+h4
+ {cursor: pointer;}
