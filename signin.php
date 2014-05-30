@@ -17,18 +17,21 @@ else
 			$_SESSION['type'] = 'AD';
 			$_SESSION['uname'] = 'admin';
 			$_SESSION['page'] = $ad_page;
+			$_SESSION['login'] = 1;
 			header("Location: home.php");
 			_exit();
 		} else if ($user == $u_ml && $pass == $p_ml) {
 			$_SESSION['uname'] = 'mailer';
 			$_SESSION['type'] = 'ML';
 			$_SESSION['page'] = $ml_page;
+			$_SESSION['login'] = 1;
 			header("Location: home.php");
 			_exit();
 		} else if ($user == $u_cl && $pass == $p_cl) {
 			$_SESSION['type'] = 'CL';
 			$_SESSION['uname'] = 'collegelist';
 			$_SESSION['page'] = $cl_page;
+			$_SESSION['login'] = 1;
 			header("Location: home.php");
 			_exit();
 		} else if ($user == $u_pl && $pass == $p_pl) {
@@ -36,6 +39,7 @@ else
 			$_SESSION['type'] = 'PL';
 			$_SESSION['page'] = $pl_page;
 			header("Location: home.php");
+			$_SESSION['login'] = 1;
 			_exit();
 		}
 		$res = $mysqli->query("select eventcode, validate from users where username='$user' and password='$pass'");

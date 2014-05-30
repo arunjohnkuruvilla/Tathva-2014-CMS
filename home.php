@@ -1,5 +1,10 @@
 <?php
 	require_once("initdb.php");
+	if (!(isset($_SESSION['login']) AND ($_SESSION['login'] == 1)))
+	{
+    	session_destroy();
+    	header("Location: index.php");
+	}
 ?>
 <html>
 <head>	

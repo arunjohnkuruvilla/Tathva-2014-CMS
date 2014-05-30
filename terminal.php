@@ -1,7 +1,15 @@
 <?php
 require_once("initdb.php");
-if ($_SESSION['type'] != 'AD')
-    _exit("You do not have access to this page");
+if (!((isset($_SESSION['type'])) AND ($_SESSION['type'] == 'AD')))
+    {
+        session_destroy();
+        header("Location: index.php");
+    }
+if (!(isset($_SESSION['login']) AND ($_SESSION['login'] == 1)))
+    {
+        session_destroy();
+        header("Location: index.php");
+    }
 ?>
 <html>
 <head>

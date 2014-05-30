@@ -1,5 +1,10 @@
 <?php
 	require_once("initdb.php");
+	if (!(isset($_SESSION['login']) AND ($_SESSION['login'] == 1)))
+	{
+		session_destroy();
+    	header("Location: index.php");
+	}
 ?>
 <html>
 <head>	
@@ -7,14 +12,12 @@
 	<link rel="shortcut icon" href="taticon.png" type="image/png" />
   	<link rel="stylesheet" href="style/home.css" type="text/css" media="all" />
   	<link rel="stylesheet" href="style/style.css" type="text/css" media="all" />
-  	<script type="text/javascript" src="js/jquery.min.js"></script>
-  	<script type="text/javascript" src="js/home.js"></script>
 </head>
 <body>
 	
 	<?php include('header.php');?>
 	<div id="margin">
-		<h4>ADMIN | HOME</h4>
+		<a href="home.php"><h4>ADMIN | HOME</h4></a>
 		  	<!--<h4>Add contact</h4>
 			<div id="addmark">
 			<?php include('modules/form-marketing.php');?>		 
