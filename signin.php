@@ -14,7 +14,7 @@ else
 		$pass = $mysqli->real_escape_string($_POST['password']);
 		if ($user == $u_ad && $pass == $p_ad) 
 		{
-			$_SESSION['type'] = 'AD';
+			$_SESSION['type'] = 0;
 			$_SESSION['uname'] = 'admin';
 			$_SESSION['page'] = $ad_page;
 			$_SESSION['login'] = 1;
