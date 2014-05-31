@@ -8,7 +8,7 @@ if ($_SESSION['type'] = "MK")
     echo "Waiting for first contact!";
   else 
   {
-    echo "<table>";
+    echo "<table>CONTACTS";
     echo " <thead>";
     echo "   <tr>";
     echo "     <th>Sl.</th>";

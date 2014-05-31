@@ -18,20 +18,6 @@
 <body>
 	
 	<?php include('header.php');?>
-	<div id="margin">
-		<a href="marketPage.php"><h4>MARKETING</h4></a>
-		  	<!--<h4>Add contact</h4>
-			<div id="addmark">
-			<?php include('modules/form-marketing.php');?>		 
-			</div>
-		</div>
-		<div id="showmarkcontainer">
-			<h4>Marketing Contacts</h4>
-			<div id="showmark">
-				<?php include('modules/table-marketing-mini.php');?>		 
-			</div> 
-		</div>-->
-	</div>
 	<div id="main">
 		<div id="instructions">
 			<h4>About Organiser - Tathva CMS</h4>

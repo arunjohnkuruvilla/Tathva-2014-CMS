@@ -6,7 +6,7 @@ if (isset($_POST["submit"]))
   $mysqli->query($in) or die($mysqli->error);
 }
 ?>
-<table class=\"well form-inline\" summary="" >
+<table class=\"well form-inline\" summary="" >ADD A NEW CONTACT
   <form  method="post" action="home.php">
     <tr>
       <td><label  for="cmpname"> Name of the Company  </label></td>

@@ -6,16 +6,9 @@
 		<a href="http://www.tathva.org/">tathva</a>
 		<span class="goodfont" style="font-size:40%; color:white;">organiser</span>
 	</div>
-	
-	<div class="goodfont headbox">
-		<div><a href="<?php echo $_SESSION['page']; ?>"><?php echo $_SESSION['uname']; ?></a></div>
-		<div><a href="logout.php">Log out</a></div>
-	</div>
-
-	<div class="goodfont headlink"><a href="<?php echo $_SESSION['page']; ?>">Organise</a>
-	</div>
-        <div class="goodfont headlink"><a href="evereg.php">Registrations</a>
-	</div>
-	<div class="goodfont headlink"><a href="home.php">Home</a>
-	</div>
+	<div class="goodfont headlink"><a href="logout.php">Log out</a></div>
+	<div class="goodfont headlink"><a href="marketPage.php">Marketing</a></div>
+	<div class="goodfont headlink"><a href="<?php echo $_SESSION['page']; ?>"><?php echo $_SESSION['uname']." PAGE"; ?></a></div>
+    <div class="goodfont headlink"><a href="evereg.php">Registrations</a></div>
+	<div class="goodfont headlink"><a href="home.php">Home</a></div>
 </div>
