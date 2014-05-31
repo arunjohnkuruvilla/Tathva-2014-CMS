@@ -18,7 +18,11 @@
 <body>
 	
 	<?php include('header.php');?>
+
 	<div id="main">
+		<div id="margin">
+			<div style="width: 100%; padding-top:20px"><a href="<?php echo $_SESSION['page']; ?>"><?php echo $_SESSION['usertype']." PAGE"; ?></a></div>
+		</div>
 		<div id="instructions">
 			<h4>About Organiser - Tathva CMS</h4>
 			Tathva Content Management System (CMS) is a platform for organisers to contribute to certain aspects of Tathva's management, with a lot of emphasis on the content put up in the official website.

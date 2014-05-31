@@ -1,13 +1,13 @@
 <?php
 require_once("initdb.php");
 $msg = "";
-if (isset($_SESSION['type']))
+/*if (isset($_SESSION['type']))
 {
 	header("Location:home.php");
 	_exit();
 }
 else 
-{
+{*/
 	if (isset($_POST["signin"])) 
 	{
 		$user = $mysqli->real_escape_string($_POST['username']);
@@ -55,7 +55,6 @@ else
 			if ($row['validate'] == 0)
 			{
 				$msg = "Your account needs to be validated!";
-				echo $msg;
 				$erlist = $row['eventcode'];
 				if ($erlist == '-pr') $erlist = '';
 			} 
@@ -65,27 +64,33 @@ else
 				if ($row['eventcode'] == '-pr') 
 				{
 					$_SESSION['type'] = 'PR';
+					$_SESSION['usertype'] = 'PROOFREADER';
 					$_SESSION['page']=$pr_page;
 				} else if ($row['eventcode'] == '-mk') 
 				{
 					$_SESSION['type'] = 'MK';
+					$_SESSION['usertype'] = 'MARKETING MANAGER';
 					$_SESSION['page']=$mk_page;
 
 				} else if ($row['eventcode'] == '-nu') 
 				{
 					$_SESSION['type'] = 'NU';
+					$_SESSION['usertype'] = ' ';
 					$_SESSION['page']=$nu_page;
 				} 
 				else 
 				{
 					$_SESSION['type'] = 'MN';
 					$_SESSION['ecode'] = $row['eventcode'];
-					$_SESSION['page']=$mn_page;;
+					$_SESSION['usertype'] = 'EVENT MANAGER';
+					$_SESSION['page']=$mn_page;
 				}
-				header("Location:home.php");
+				$_SESSION['login'] = 1;
+				session_start();
+				header("Location:".$_SESSION['page']);
 				$res->free();
 				_exit();
 			}
 		}
 	}
-}?>
+?>	

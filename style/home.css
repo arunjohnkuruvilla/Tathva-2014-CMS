@@ -4,7 +4,7 @@ body
  }
 #main
  {
- 	float:right;
+ 	text-align: center;
  	width:100%;
  }
 #margin
@@ -18,11 +18,10 @@ body
  }
 #instructions
  {
- 	float:left;
- 	margin:5px;
+ 	margin:0px auto;
  	font-size: 80%;
  	/*border:1px dotted black;*/
- 	width:55%;
+ 	width:80%;
  	text-align:center;
  }
 #addmarkcontainer
