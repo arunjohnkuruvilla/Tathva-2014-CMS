@@ -23,7 +23,7 @@ if (!$row)
           <col style="width: 102px">
           <col style="width: 163px">
       </colgroup>
-      <thead>
+      <thead>USERS
         <tr>
           <th>ROLLNUMBER</th>
           <th>Username</th> 
