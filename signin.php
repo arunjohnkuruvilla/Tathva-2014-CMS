@@ -1,13 +1,6 @@
 <?php
 require_once("initdb.php");
 $msg = "";
-/*if (isset($_SESSION['type']))
-{
-	header("Location:home.php");
-	_exit();
-}
-else 
-{*/
 	if (isset($_POST["signin"])) 
 	{
 		$user = $mysqli->real_escape_string($_POST['username']);
@@ -18,27 +11,27 @@ else
 			$_SESSION['uname'] = 'admin';
 			$_SESSION['page'] = $ad_page;
 			$_SESSION['login'] = 1;
-			header("Location: home.php");
+			header("Location:".$ad_page);
 			_exit();
 		} else if ($user == $u_ml && $pass == $p_ml) {
 			$_SESSION['uname'] = 'mailer';
 			$_SESSION['type'] = 'ML';
 			$_SESSION['page'] = $ml_page;
 			$_SESSION['login'] = 1;
-			header("Location: home.php");
+			header("Location:".$ml_page);
 			_exit();
 		} else if ($user == $u_cl && $pass == $p_cl) {
 			$_SESSION['type'] = 'CL';
 			$_SESSION['uname'] = 'collegelist';
 			$_SESSION['page'] = $cl_page;
 			$_SESSION['login'] = 1;
-			header("Location: home.php");
+			header("Location:".$cl_page);
 			_exit();
 		} else if ($user == $u_pl && $pass == $p_pl) {
 			$_SESSION['uname'] = 'publist';
 			$_SESSION['type'] = 'PL';
 			$_SESSION['page'] = $pl_page;
-			header("Location: home.php");
+			header("Location:".$pl_page);
 			$_SESSION['login'] = 1;
 			_exit();
 		}
@@ -75,7 +68,7 @@ else
 				} else if ($row['eventcode'] == '-nu') 
 				{
 					$_SESSION['type'] = 'NU';
-					$_SESSION['usertype'] = ' ';
+					$_SESSION['usertype'] = 'REGULAR USER';
 					$_SESSION['page']=$nu_page;
 				} 
 				else 
